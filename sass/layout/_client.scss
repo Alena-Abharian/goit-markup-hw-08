@@ -1,0 +1,25 @@
+.client {
+  flex-wrap: nowrap;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 250ms var(--timing-function),
+    fill 250ms var(--timing-function);
+    background: none;
+    cursor: pointer;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--border-client);
+    border-radius: 4px;
+    fill: var(--icon-color-first);
+
+    &:hover,
+    &:focus {
+      border-color: var(--accent-color);
+      fill: var(--accent-color);
+    }
+  }
+}
+

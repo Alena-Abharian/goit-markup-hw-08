@@ -1,0 +1,21 @@
+.address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &__link {
+    color: var(--white-color);
+
+    &--mail, &--tel {
+      color: var(--opacity-white-color);
+    }
+  }
+}
+
+
+

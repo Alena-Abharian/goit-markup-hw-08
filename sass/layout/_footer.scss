@@ -1,0 +1,25 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--second-background-color);
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__social {
+    margin-right: 93px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-color);
+  }
+}
+
+
