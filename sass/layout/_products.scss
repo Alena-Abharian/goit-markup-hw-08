@@ -23,12 +23,16 @@
 
     position: relative;
     overflow: hidden;
+
   }
 
   &__description {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.55;
     color: var(--white-color);
+    @include mq(mob) {
+      font-size: 18px;
+    }
 
     &--overlay {
       position: absolute;
@@ -40,9 +44,12 @@
       transition: transform 250ms var(--timing-function),
       opacity 250ms var(--timing-function);
       display: inline-block;
-      padding: 63px 24px;
+      padding: 35px 24px;
       background-color: rgba(33, 150, 243, 0.9);
       opacity: 0;
+      @include mq(mob) {
+        padding: 63px 24px;
+      }
     }
   }
 

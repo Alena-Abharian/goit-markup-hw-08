@@ -57,7 +57,7 @@
     @include mq(tab) {
       display: flex;
       align-items: baseline;
-      justify-content: space-between;
+      justify-content: center;
     }
   }
 }
