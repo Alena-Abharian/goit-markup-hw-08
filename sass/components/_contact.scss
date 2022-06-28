@@ -1,16 +1,20 @@
 .contact {
   display: none;
-  @include mq(tab-only) {
+
+  @include mq(tab) {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin-left: auto;
   }
+  @include mq(tab-only) {
 
+    flex-direction: column;
+    justify-content: center;
+
+  }
   @include mq(desk) {
-    display: flex;
+
     align-items: center;
-    margin-left: auto;
+
   }
 
   &__item:not(:last-child) {

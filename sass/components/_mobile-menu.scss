@@ -1,35 +1,53 @@
-.mob-btn {
-  position: absolute;
+.mob-btn__close,
+.mob-btn__open {
   background-color: transparent;
   border: none;
   display: block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  @include mq(tab) {
+    display: none;
+  }
+}
+
+.mob-btn__close {
+  position: absolute;
   top: 10px;
   right: 15px;
-  @include mq(tab) {
-    display: none;
-  }
-  @include mq(tab) {
-    display: none;
-  }
-
   &:focus-visible {
     fill: var(--accent-color)
   }
 }
 
+
 .mob-menu {
   position: fixed;
   z-index: 1;
   background-color: #FFFFFF;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  transform: translateX(100%);
   top: 0;
+  right: 0;
   overflow: auto;
+  //padding-left: 40px;
+  //padding-bottom: 48px;
+  transition: transform 250ms var(--timing-function);
+
+  &.is-open {
+    transform: translateX(0);
+  }
 }
 
-
 .mob-container {
-  padding: 48px 83px 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-left: 40px;
+  padding-bottom: 48px;
+  padding-top: 48px;
 }
 
 
@@ -37,10 +55,9 @@
   &__link {
     font-weight: 500;
     font-size: 40px;
-    line-height: 47px;
+    line-height: 1.2;
     letter-spacing: 0.02em;
-    color: var(--first-text-color)
-
+    color: var(--first-text-color);
   }
 
   &--current {
@@ -50,10 +67,6 @@
   &__item:not(:last-child) {
     margin-bottom: 32px;
   }
-
-  &__item:last-child {
-    margin-bottom: 302px;
-  }
 }
 
 .mob-contact {
@@ -61,16 +74,19 @@
 
   &--link__tel {
     font-weight: 500;
-    font-size: 34px;
-    line-height: 40px;
+    font-size: 26px;
+    line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--accent-color);
+    @include mq(mob) {
+      font-size: 34px;
+    }
   }
 
   &--link__mail {
     font-weight: 500;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--second-text-color);
   }
@@ -82,11 +98,12 @@
 
 .mob-social {
   display: flex;
+  flex-wrap: wrap;
 
   &__link {
     font-weight: 500;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.2;
     letter-spacing: 0.02em;
     color: var(--accent-color);
   }
@@ -95,6 +112,7 @@
     margin-right: 20px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
     padding-right: 10px;
+    margin-bottom: 20px;
   }
 }
 

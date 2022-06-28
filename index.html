@@ -19,53 +19,49 @@
 <header class="header">
 
     <!--Mobile menu-->
-    <div>
-        <button type="button" class="mob-btn menu-open">
-            <svg class="mob-btn__menu" width="40" height="40">>
-                <use href="./images/icons.svg#icon-menu"></use>
-            </svg>
-        </button>
-    </div>
-    <div class="mob-menu is-hidden">
-        <button type="button" class="mob-btn menu-close">
-            <svg class="mob-btn__close" width="40" height="40">
-                <use href="./images/icons.svg#icon-close_40px"></use>
-            </svg>
-        </button>
+    <div class="mob-menu ">
 
         <div class="mob-container">
+            <button type="button" class="mob-btn__close menu-close">
+                <svg class="mob-btn--icon__close" width="40" height="40">
+                    <use href="./images/icons.svg#icon-close_40px"></use>
+                </svg>
+            </button>
             <ul class="mob-nav list">
-                <li class="mob-nav__item"><a class="mob-nav__link mob-nav--current link" href="./index.html">Студия</a>
+                <li class="mob-nav__item"><a class="mob-nav__link mob-nav--current link"
+                                             href="./index.html">Студия</a>
                 </li>
                 <li class="mob-nav__item"><a class="mob-nav__link link" href="./portfolio.html">Портфолио</a></li>
                 <li class="mob-nav__item"><a class="mob-nav__link link" href="">Контакты</a></li>
             </ul>
 
-            <ul class="mob-contact list">
-                <li class="mob-contact__item">
-                    <a class="mob-contact--link__tel link" href="tel:+380961111111">
-                        +38 096 111 11 11
-                    </a>
-                </li>
-                <li class="mob-contact__item">
-                    <a class="mob-contact--link__mail link" href="mailto:info@devstudio.com">
-                        info@devstudio.com
-                    </a>
-                </li>
-            </ul>
+            <div>
+                <ul class="mob-contact list">
+                    <li class="mob-contact__item">
+                        <a class="mob-contact--link__tel link" href="tel:+380961111111">
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                    <li class="mob-contact__item">
+                        <a class="mob-contact--link__mail link" href="mailto:info@devstudio.com">
+                            info@devstudio.com
+                        </a>
+                    </li>
+                </ul>
 
-            <ul class="mob-social list">
-                <li class="mob-social__item"><a class="mob-social__link link" href="">Instagram</a></li>
-                <li class="mob-social__item"><a class="mob-social__link link" href="">Twitter</a></li>
-                <li class="mob-social__item"><a class="mob-social__link link" href="">Facebook</a></li>
-                <li class="mob-social__item"><a class="mob-social__link link" href="">LinkedIn</a></li>
-            </ul>
+                <ul class="mob-social list">
+                    <li class="mob-social__item"><a class="mob-social__link link" href="">Instagram</a></li>
+                    <li class="mob-social__item"><a class="mob-social__link link" href="">Twitter</a></li>
+                    <li class="mob-social__item"><a class="mob-social__link link" href="">Facebook</a></li>
+                    <li class="mob-social__item"><a class="mob-social__link link" href="">LinkedIn</a></li>
+                </ul>
+            </div>
+
         </div>
     </div>
 
 
     <!--Desk menu-->
-
     <div class="container header__container">
         <nav class="wrap header__wrap">
             <a class="logo header__logo link" href="./index.html"><span class="logo--acсent">Web</span>Studio</a>
@@ -95,6 +91,11 @@
                 </a>
             </li>
         </ul>
+        <button type="button" class="mob-btn__open menu-open">
+            <svg class="mob-btn--open__menu" width="40" height="40">>
+                <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+        </button>
     </div>
 </header>
 

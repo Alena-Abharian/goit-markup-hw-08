@@ -2,14 +2,15 @@
   background-color: var(--white-color);
   border-bottom: 1px solid var(--border-color);
   @include mq(mob-only) {
-    padding: 16px 0;
+    padding: 10px 0;
   }
 
   &__container {
-    @include mq(tab) {
-      display: flex;
+    display: flex;
+    align-items: center;
+    @include mq(mob-only){
+      justify-content: space-between;
     }
-
   }
 
   &__wrap {
