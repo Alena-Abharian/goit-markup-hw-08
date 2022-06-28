@@ -2,8 +2,12 @@
   color: var(--black-color);
   font-family: var(--logo-font-family);
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
+  @include mq(desk){
+    font-size: 26px;
+  }
+
 
   &--acсent {
     color: var(--accent-color);
@@ -12,7 +16,6 @@
   &--white {
     display: block;
     margin-bottom: 20px;
-    margin-right: 156px;
     color: var(--white-color);
   }
 }

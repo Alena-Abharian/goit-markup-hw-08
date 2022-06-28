@@ -1,33 +1,62 @@
 .hero {
-  padding-bottom: 200px;
-  padding-top: 200px;
+  padding-bottom: 118px;
+  padding-top: 118px;
+  @include mq(desk){
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
   max-width: 1600px;
-  min-height: 600px;
+  max-height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--second-background-color);
-  background-image: linear-gradient(
-                  to right,
-                  var(--bg-gradient),
-                  var(--bg-gradient)
-  ),
-  url("../images/hero-img.jpg");
+  background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
+  url("../../images/hero-m-min.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   text-align: center;
+  @include mq(retina){
+    background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
+    url("../../images/hero-m2x-min.jpg");
+  }
+  @include mq(tab){
+    background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
+    url("../../images/hero-t-min.jpg");
+    @include mq(retina){
+      background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
+      url("../../images/hero-t2x-min.jpg");
+    }
+  }
+  @include mq(desk){
+    background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
+    url("../../images/hero-d-min.jpg");
+    @include mq(retina){
+      background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
+      url("../../images/hero-d2x-min.jpg");
+    }
+  }
 
   &__title {
     margin-bottom: 30px;
-    max-width: 696px;
     margin-right: auto;
     margin-left: auto;
     color: var(--white-color);
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @include mq(tab){
+      max-width: 360px;
+    }
+
+    @include mq(desk){
+      font-size: 44px;
+      line-height: 1.4;
+      max-width: 696px;
+    }
   }
 }
 

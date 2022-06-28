@@ -1,5 +1,13 @@
 .client {
-  flex-wrap: nowrap;
+  --card-item: 2;
+
+  @include mq(tab) {
+    --card-item: 3;
+  }
+
+  @include mq(desk){
+   --card-item: 6;
+  }
 
   &__btn {
     display: flex;
@@ -9,7 +17,6 @@
     fill 250ms var(--timing-function);
     background: none;
     cursor: pointer;
-    width: 170px;
     height: 92px;
     border: 1px solid var(--border-client);
     border-radius: 4px;

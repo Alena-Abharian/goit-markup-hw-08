@@ -1,17 +1,31 @@
 .header {
   background-color: var(--white-color);
   border-bottom: 1px solid var(--border-color);
+  @include mq(mob-only){
+    padding: 16px 0;
+  }
 
   &__container {
-    display: flex;
+    @include mq(tab){
+      display: flex;
+    }
+
   }
 
   &__wrap {
-    display: flex;
-    align-items: center;
+    @include mq(tab){
+      display: flex;
+      align-items: center;
+    }
+
   }
 
   &__logo {
-    margin-right: 93px;
+    @include mq(tab){
+      margin-right: 88px;
+    }
+    @include mq(desk){
+      margin-right: 93px;
+    }
   }
 }
