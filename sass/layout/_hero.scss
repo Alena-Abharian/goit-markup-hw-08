@@ -11,29 +11,29 @@
   margin-right: auto;
   background-color: var(--second-background-color);
   background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
-  url("../../images/hero-m-min.jpg");
+  url("../images/hero-m-min.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   text-align: center;
   @include mq(retina) {
     background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
-    url("../../images/hero-m2x-min.jpg");
+    url("../images/hero-m2x-min.jpg");
   }
   @include mq(tab) {
     background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
-    url("../../images/hero-t-min.jpg");
+    url("../images/hero-t-min.jpg");
     @include mq(retina) {
       background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
-      url("../../images/hero-t2x-min.jpg");
+      url("../images/hero-t2x-min.jpg");
     }
   }
   @include mq(desk) {
     background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
-    url("../../images/hero-d-min.jpg");
+    url("../images/hero-d-min.jpg");
     @include mq(retina) {
       background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
-      url("../../images/hero-d2x-min.jpg");
+      url("../images/hero-d2x-min.jpg");
     }
   }
 
