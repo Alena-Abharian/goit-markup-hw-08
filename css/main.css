@@ -326,11 +326,11 @@ img {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 10px;
   left: 50%;
   padding: 40px;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%) scale(1);
   transition: transform 250ms var(--timing-function);
   max-width: 450px;
   width: 100%;
@@ -338,8 +338,16 @@ img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14), 0 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+@media (max-width: 767.98px) {
+  .modal {
+    height: 100%;
+    overflow: auto;
+  }
+}
 @media (min-width: 1200px) {
   .modal {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
     text-align: center;
     max-width: 528px;
   }
@@ -659,9 +667,13 @@ img {
     display: none;
   }
 }
+.mob-btn:focus-visible {
+  fill: var(--accent-color);
+}
 
 .mob-menu {
   position: fixed;
+  z-index: 1;
   background-color: #FFFFFF;
   width: 100vw;
   height: 100vh;
@@ -680,6 +692,9 @@ img {
   letter-spacing: 0.02em;
   color: var(--first-text-color);
 }
+.mob-nav--current {
+  color: var(--accent-color);
+}
 .mob-nav__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -695,14 +710,14 @@ img {
   font-size: 34px;
   line-height: 40px;
   letter-spacing: 0.02em;
-  color: #2196F3;
+  color: var(--accent-color);
 }
 .mob-contact--link__mail {
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--second-text-color);
 }
 .mob-contact__item:not(:last-child) {
   margin-bottom: 32px;
@@ -716,7 +731,7 @@ img {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.02em;
-  color: #2196F3;
+  color: var(--accent-color);
 }
 .mob-social__item:not(:last-child) {
   margin-right: 20px;
@@ -1017,7 +1032,9 @@ img {
   justify-content: space-between;
 }
 .product__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow 250ms var(--timing-function);
 }
 .product__link:hover, .product__link:focus {
@@ -1051,6 +1068,7 @@ img {
   opacity: 1;
 }
 .product__content {
+  flex-grow: 1;
   border: 1px solid var(--grey-color);
   border-top: none;
   padding: 20px 24px;

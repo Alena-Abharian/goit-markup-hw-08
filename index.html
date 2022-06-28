@@ -35,7 +35,8 @@
 
         <div class="mob-container">
             <ul class="mob-nav list">
-                <li class="mob-nav__item"><a class="mob-nav__link link" href="./index.html">Студия</a></li>
+                <li class="mob-nav__item"><a class="mob-nav__link mob-nav--current link" href="./index.html">Студия</a>
+                </li>
                 <li class="mob-nav__item"><a class="mob-nav__link link" href="./portfolio.html">Портфолио</a></li>
                 <li class="mob-nav__item"><a class="mob-nav__link link" href="">Контакты</a></li>
             </ul>
@@ -164,15 +165,36 @@
             <h2 class="section__title title">Чем мы занимаемся</h2>
             <ul class="list card-set">
                 <li class="work__pic card-set-item">
-                    <img src="./images/box%201.jpg" alt="написание кода" width="370"/>
+                    <picture>
+                        <source
+                                srcset="./images/box1.jpg 1x,
+                                        ./images/box2x-1-min.jpg 2x"
+                                media="(min-width: 1200px)"
+                        />
+                        <img src="./images/box1.jpg" alt="написание кода" width="370"/>
+                    </picture>
                     <h3 class="work__title">Десктопные приложения</h3>
                 </li>
                 <li class="work__pic card-set-item">
-                    <img src="./images/box%202.jpg" alt="разработка макетов телефона" width="370"/>
+                    <picture>
+                        <source
+                                srcset="./images/box2.jpg 1x,
+                                    ./images/box2x-2-min.jpg 2x"
+                                media="(min-width: 1200px)"
+                        />
+                        <img src="./images/box2.jpg" alt="разработка макетов телефона" width="370"/>
+                    </picture>
                     <h3 class="work__title">Мобильные приложения</h3>
                 </li>
                 <li class="work__pic card-set-item">
-                    <img src="./images/box%203.jpg" alt="палитра цветов" width="370"/>
+                    <picture>
+                        <source
+                                srcset="./images/box3.jpg 1x,
+                                    ./images/box2x-3-min.jpg 2x"
+                                media="(min-width: 1200px)"
+                        />
+                        <img src="./images/box3.jpg" alt="палитра цветов" width="370"/>
+                    </picture>
                     <h3 class="work__title">Дизайнерские решения</h3>
                 </li>
             </ul>
@@ -240,7 +262,23 @@
                 </li>
 
                 <li class="team__list card-set-item">
-                    <img src="./images/img1.jpg" alt="фото женщины" width="270"/>
+                    <picture>
+                        <source
+                                srcset="./images/img-d-1.jpg 1x,
+                                        ./images/img-d2x-1-min.jpg 2x"
+                                media="(min-width: 1200px)"
+                        />
+                        <source
+                                srcset="./images/img-t1-min.jpg 1x,
+                                        ./images/img-t2x-1-min.jpg 2x"
+                                media="(min-width: 768px)"
+                        />
+                        <source srcset="./images/img-m1-min.jpg 1x,
+                                        ./images/img-m2x-1-min.jpg 2x"
+                                media="(min-width: 320px)"
+                        />
+                        <img src="./images/img-d-1.jpg" alt="фото женщины" width="270"/>
+                    </picture>
                     <div class="team__wrap">
                         <h3 class="team__title title">Ольга Репина</h3>
                         <p class="team__text text">Frontend Developer</p>
@@ -278,7 +316,23 @@
                 </li>
 
                 <li class="team__list card-set-item">
-                    <img src="./images/img2.jpg" alt="фото мужчины" width="270"/>
+                    <picture>
+                        <source
+                                srcset="./images/img-d-2.jpg 1x,
+                                        ./images/img-d2x-2-min.jpg 2x"
+                                media="(min-width: 1200px)"
+                        />
+                        <source
+                                srcset="./images/img-t2-min.jpg 1x,
+                                        ./images/img-t2x-2-min.jpg 2x"
+                                media="(min-width: 768px)"
+                        />
+                        <source srcset="./images/img-m2-min.jpg 1x,
+                                        ./images/img-m2x-2-min.jpg 2x"
+                                media="(min-width: 320px)"
+                        />
+                        <img src="./images/img-d-2.jpg" alt="фото мужчины" width="270"/>
+                    </picture>
                     <div class="team__wrap">
                         <h3 class="team__title title">Николай Тарасов</h3>
                         <p class="team__text text">Marketing</p>
@@ -316,7 +370,23 @@
                 </li>
 
                 <li class="team__list card-set-item">
-                    <img src="./images/img3.jpg" alt="фото мужчины" width="270"/>
+                    <picture>
+                        <source
+                                srcset="./images/img-d-3.jpg 1x,
+                                        ./images/img-d2x-3-min.jpg 2x"
+                                media="(min-width: 1200px)"
+                        />
+                        <source
+                                srcset="./images/img-t3-min.jpg 1x,
+                                        ./images/img-t2x-3-min.jpg 2x"
+                                media="(min-width: 768px)"
+                        />
+                        <source srcset="./images/img-m3-min.jpg 1x,
+                                        ./images/img-m2x-3-min.jpg 2x"
+                                media="(min-width: 320px)"
+                        />
+                        <img src="./images/img-d-3.jpg" alt="фото мужчины" width="270"/>
+                    </picture>
                     <div class="team__wrap">
                         <h3 class="team__title title"> Михаил Ермаков</h3>
                         <p class="team__text text">UI Designer</p>

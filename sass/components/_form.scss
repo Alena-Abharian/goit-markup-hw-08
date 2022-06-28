@@ -8,7 +8,7 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--first-text-color);
-    @include mq(desk){
+    @include mq(desk) {
       line-height: 1.15;
     }
   }
@@ -99,7 +99,7 @@
     line-height: 1.2;
     letter-spacing: 0.03em;
     color: var(--form-color);
-    @include mq(desk){
+    @include mq(desk) {
       font-size: 14px;
       line-height: 1.7;
     }

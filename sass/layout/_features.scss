@@ -1,5 +1,5 @@
 .features {
-  @include mq(desk){
+  @include mq(desk) {
     flex-wrap: nowrap;
   }
 
@@ -9,21 +9,14 @@
     justify-content: center;
     padding: 0;
     margin-bottom: 30px;
-    //width: 450px;
     height: 120px;
     border-radius: 4px;
     background-color: var(--filter-btn-color);
-    @include mq(tab){
-      //width: 354px;
-    }
-    @include mq(desk){
-      //width: 270px;
-    }
   }
 
   &__item {
     width: 100%;
-    @include mq(desk){
+    @include mq(desk) {
       width: 270px;
     }
 
@@ -34,7 +27,7 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    @include mq(mob-only){
+    @include mq(mob-only) {
       text-align: center;
     }
   }

@@ -3,36 +3,36 @@
   padding-bottom: 60px;
   background-color: var(--second-background-color);
   text-align: center;
-  @include mq(desk){
+  @include mq(desk) {
     text-align: unset;
   }
 
 
   &__container {
-    @include mq(desk){
+    @include mq(desk) {
       display: flex;
       align-items: baseline;
     }
   }
 
-  &__address{
-    @include mq(mob-only){
+  &__address {
+    @include mq(mob-only) {
       margin-bottom: 60px;
     }
-    @include mq(tab){
-      margin-right: 165px ;
+    @include mq(tab) {
+      margin-right: 165px;
     }
-    @include mq(desk){
+    @include mq(desk) {
       margin-right: 85px;
     }
   }
 
 
   &__social {
-    @include mq(mob-only){
+    @include mq(mob-only) {
       margin-bottom: 60px;
     }
-    @include mq(desk){
+    @include mq(desk) {
       margin-right: 93px;
     }
   }
@@ -45,16 +45,16 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--white-color);
-    @include mq(desk){
+    @include mq(desk) {
       text-align: unset;
     }
   }
 
-  &__wrap{
-    @include mq(tab-only){
+  &__wrap {
+    @include mq(tab-only) {
       margin-bottom: 60px;
     }
-    @include mq(tab){
+    @include mq(tab) {
       display: flex;
       align-items: baseline;
     }

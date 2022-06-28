@@ -28,7 +28,7 @@ body {
 }
 
 .not-padding {
-  @include mq(desk){
+  @include mq(desk) {
     padding-bottom: 0;
   }
 }

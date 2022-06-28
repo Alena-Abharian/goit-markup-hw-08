@@ -2,10 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--card-gap);
-  @include mq(tab){
+  @include mq(tab) {
     --card-item: 2;
   }
-  @include mq(desk){
+  @include mq(desk) {
     --card-item: 3;
   }
 }

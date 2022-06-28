@@ -1,4 +1,4 @@
-.mob-btn{
+.mob-btn {
   position: absolute;
   background-color: transparent;
   border: none;
@@ -11,10 +11,15 @@
   @include mq(tab) {
     display: none;
   }
+
+  &:focus-visible {
+    fill: var(--accent-color)
+  }
 }
 
-.mob-menu{
+.mob-menu {
   position: fixed;
+  z-index: 1;
   background-color: #FFFFFF;
   width: 100vw;
   height: 100vh;
@@ -23,68 +28,70 @@
 }
 
 
-.mob-container{
-padding: 48px 83px 48px 40px;
+.mob-container {
+  padding: 48px 83px 48px 40px;
 }
 
 
-.mob-nav{
-  &__link{
+.mob-nav {
+  &__link {
     font-weight: 500;
     font-size: 40px;
     line-height: 47px;
     letter-spacing: 0.02em;
     color: var(--first-text-color)
+
   }
 
-  &__item:not(:last-child){
+  &--current {
+    color: var(--accent-color);
+  }
+
+  &__item:not(:last-child) {
     margin-bottom: 32px;
   }
 
-  &__item:last-child{
+  &__item:last-child {
     margin-bottom: 302px;
   }
 }
 
-
-.mob-contact{
+.mob-contact {
   margin-bottom: 64px;
 
-  &--link__tel{
+  &--link__tel {
     font-weight: 500;
     font-size: 34px;
     line-height: 40px;
     letter-spacing: 0.02em;
-    color: #2196F3;
+    color: var(--accent-color);
   }
 
-  &--link__mail{
+  &--link__mail {
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.02em;
-    color: #757575;
+    color: var(--second-text-color);
   }
 
-  &__item:not(:last-child){
+  &__item:not(:last-child) {
     margin-bottom: 32px;
   }
-
 }
 
-
-.mob-social{
+.mob-social {
   display: flex;
 
- &__link{
+  &__link {
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.02em;
-    color: #2196F3;
+    color: var(--accent-color);
   }
 
-  &__item:not(:last-child){
+  &__item:not(:last-child) {
     margin-right: 20px;
     border-right: 1px solid rgba(33, 33, 33, 0.2);
     padding-right: 10px;

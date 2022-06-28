@@ -1,23 +1,23 @@
 .contact {
   display: none;
-  @include mq(tab-only){
+  @include mq(tab-only) {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: auto;
   }
 
-  @include mq(desk){
+  @include mq(desk) {
     display: flex;
     align-items: center;
     margin-left: auto;
   }
 
   &__item:not(:last-child) {
-    @include mq(tab-only){
+    @include mq(tab-only) {
       margin-bottom: 10px;
     }
-    @include mq(desk){
+    @include mq(desk) {
       margin-right: 30px;
     }
   }
@@ -32,18 +32,15 @@
       font-weight: 500;
       letter-spacing: 0.02em;
 
-      @include mq(tab){
+      @include mq(tab) {
         font-size: 12px;
         line-height: 1.2;
       }
-      @include mq(desk){
+      @include mq(desk) {
         font-size: 14px;
         line-height: 1.14;
       }
     }
-
-
-
 
 
     &__mail:hover,
@@ -54,7 +51,7 @@
     }
   }
 
-  @include mq(desk){
+  @include mq(desk) {
     &__item {
       display: flex;
       justify-content: center;

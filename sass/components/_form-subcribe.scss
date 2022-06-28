@@ -1,10 +1,10 @@
 .form-footer {
-  @include mq(tab-only){
+  @include mq(tab-only) {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  @include mq(desk){
+  @include mq(desk) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,10 +22,10 @@
     border-radius: 4px;
     outline: none;
     color: var(--white-color);
-    @include mq(noDesk){
+    @include mq(noDesk) {
       margin-bottom: 20px;
     }
-    @include mq(desk){
+    @include mq(desk) {
       width: 358px;
       margin-right: 12px;
     }
@@ -39,8 +39,8 @@
   }
 
   &__btn {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 
   &__icon {

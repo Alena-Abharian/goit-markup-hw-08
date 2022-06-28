@@ -3,8 +3,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     transition: box-shadow 250ms var(--timing-function);
   }
 
@@ -17,6 +20,7 @@
   }
 
   &__wrap {
+
     position: relative;
     overflow: hidden;
   }
@@ -48,6 +52,7 @@
   }
 
   &__content {
+    flex-grow: 1;
     border: 1px solid var(--grey-color);
     border-top: none;
     padding: 20px 24px;

@@ -1,9 +1,8 @@
 .nav {
   display: none;
-  @include mq(tab){
+  @include mq(tab) {
     display: flex;
   }
-
 
 
   &__item {

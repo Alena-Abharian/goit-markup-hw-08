@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Портфолио</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -17,14 +17,63 @@
 
 <!--Header-->
 <header class="header">
+
+    <!--Mobile menu-->
+    <div>
+        <button type="button" class="mob-btn menu-open">
+            <svg class="mob-btn__menu" width="40" height="40">>
+                <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="mob-menu is-hidden">
+        <button type="button" class="mob-btn menu-close">
+            <svg class="mob-btn__close" width="40" height="40">
+                <use href="./images/icons.svg#icon-close_40px"></use>
+            </svg>
+        </button>
+
+        <div class="mob-container">
+            <ul class="mob-nav list">
+                <li class="mob-nav__item"><a class="mob-nav__link link" href="./index.html">Студия</a></li>
+                <li class="mob-nav__item"><a class="mob-nav__link mob-nav--current link" href="./portfolio.html">Портфолио</a>
+                </li>
+                <li class="mob-nav__item"><a class="mob-nav__link link" href="">Контакты</a></li>
+            </ul>
+
+            <ul class="mob-contact list">
+                <li class="mob-contact__item">
+                    <a class="mob-contact--link__tel link" href="tel:+380961111111">
+                        +38 096 111 11 11
+                    </a>
+                </li>
+                <li class="mob-contact__item">
+                    <a class="mob-contact--link__mail link" href="mailto:info@devstudio.com">
+                        info@devstudio.com
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="mob-social list">
+                <li class="mob-social__item"><a class="mob-social__link link" href="">Instagram</a></li>
+                <li class="mob-social__item"><a class="mob-social__link link" href="">Twitter</a></li>
+                <li class="mob-social__item"><a class="mob-social__link link" href="">Facebook</a></li>
+                <li class="mob-social__item"><a class="mob-social__link link" href="">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--Desk menu-->
+
     <div class="container header__container">
         <nav class="wrap header__wrap">
             <a class="logo header__logo link" href="./index.html"><span class="logo--acсent">Web</span>Studio</a>
 
             <ul class="nav list">
                 <li class="nav__item"><a class="nav__link link" href="./index.html">Студия</a></li>
-                <li class="nav__item"><a class="nav__link link nav__link--current" href="./portfolio.html">Портфолио</a>
-                </li>
+                <li class="nav__item"><a class="nav__link link  nav__link--current"
+                                         href="./portfolio.html">Портфолио</a></li>
                 <li class="nav__item"><a class="nav__link link" href="">Контакты</a></li>
             </ul>
         </nav>
@@ -49,7 +98,6 @@
         </ul>
     </div>
 </header>
-
 
 <!--Main-->
 <main>
@@ -79,7 +127,23 @@
                 <li class="product__list card-set-item">
                     <a class="product__link link" href="">
                         <div class="product__wrap">
-                            <img src="./images/laptop%20(1).jpg" alt="ноутбук">
+                            <picture>
+                                <source
+                                        srcset="./images/laptop.jpg 1x,
+                                        ./images/d-min.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                />
+                                <source
+                                        srcset="./images/t-min.jpg 1x,
+                                        ./images/t@2x-min.jpg 2x"
+                                        media="(min-width: 768px)"
+                                />
+                                <source srcset="./images/m-min.jpg 1x,
+                                        ./images/m@2x-min.jpg 2x"
+                                        media="(min-width: 320px)"
+                                />
+                                <img src="./images/laptop.jpg" alt="ноутбук">
+                            </picture>
                             <p class="product__description product__description--overlay">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала
                                 и сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -96,7 +160,23 @@
                 <li class="product__list card-set-item">
                     <a class="product__link link" href="">
                         <div class="product__wrap">
-                            <img src="./images/men%20(1).jpg" alt="два баскетболиста">
+                            <picture>
+                                <source
+                                        srcset="./images/men.jpg 1x,
+                                        ./images/d-1-min.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                />
+                                <source
+                                        srcset="./images/t-1-min.jpg 1x,
+                                        ./images/t@2x-1-min.jpg 2x"
+                                        media="(min-width: 768px)"
+                                />
+                                <source srcset="./images/m-1-min.jpg 1x,
+                                        ./images/m@2x-1-min.jpg 2x"
+                                        media="(min-width: 320px)"
+                                />
+                                <img src="./images/men.jpg" alt="два баскетболиста">
+                            </picture>
                             <p class="product__description product__description--overlay">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала
                                 и сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -112,7 +192,23 @@
                 <li class="product__list card-set-item">
                     <a class="product__link link" href="">
                         <div class="product__wrap">
-                            <img src="./images/brand%20(1).jpg" alt="логотип рыбного ресторана">
+                            <picture>
+                                <source
+                                        srcset="./images/brand.jpg 1x,
+                                        ./images/d-2-min.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                />
+                                <source
+                                        srcset="./images/t-2-min.jpg 1x,
+                                        ./images/t@2x-2-min.jpg 2x"
+                                        media="(min-width: 768px)"
+                                />
+                                <source srcset="./images/m-2-min.jpg 1x,
+                                        ./images/m@2x-2-min.jpg 2x"
+                                        media="(min-width: 320px)"
+                                />
+                                <img src="./images/brand.jpg" alt="логотип рыбного ресторана">
+                            </picture>
                             <p class="product__description product__description--overlay">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала
                                 и сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -128,7 +224,23 @@
                 <li class="product__list card-set-item">
                     <a class="product__link link" href="">
                         <div class="product__wrap">
-                            <img src="./images/headphones%20(1).jpg" alt="черные наушники">
+                            <picture>
+                                <source
+                                        srcset="./images/headphones.jpg 1x,
+                                        ./images/d-3-min.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                />
+                                <source
+                                        srcset="./images/t-3-min.jpg 1x,
+                                        ./images/t@2x-3-min.jpg 2x"
+                                        media="(min-width: 768px)"
+                                />
+                                <source srcset="./images/m-3-min.jpg 1x,
+                                        ./images/m@2x-3-min.jpg 2x"
+                                        media="(min-width: 320px)"
+                                />
+                                <img src="./images/headphones.jpg" alt="черные наушники">
+                            </picture>
                             <p class="product__description product__description--overlay">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала
                                 и сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -144,7 +256,23 @@
                 <li class="product__list card-set-item">
                     <a class="product__link link" href="">
                         <div class="product__wrap">
-                            <img src="./images/cards%20(1).jpg" alt="визитки">
+                            <picture>
+                                <source
+                                        srcset="./images/cards.jpg 1x,
+                                        ./images/d-4-min.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                />
+                                <source
+                                        srcset="./images/t-4-min.jpg 1x,
+                                        ./images/t@2x-4-min.jpg 2x"
+                                        media="(min-width: 768px)"
+                                />
+                                <source srcset="./images/m-4-min.jpg 1x,
+                                        ./images/m@2x-4-min.jpg 2x"
+                                        media="(min-width: 320px)"
+                                />
+                                <img src="./images/cards.jpg" alt="визитки">
+                            </picture>
                             <p class="product__description product__description--overlay">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала
                                 и сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -160,7 +288,23 @@
                 <li class="product__list card-set-item">
                     <a class="product__link link" href="">
                         <div class="product__wrap">
-                            <img src="./images/comp%20(1).jpg" alt="монитор компьютера">
+                            <picture>
+                                <source
+                                        srcset="./images/comp.jpg 1x,
+                                        ./images/d-5-min.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                />
+                                <source
+                                        srcset="./images/t-5-min.jpg 1x,
+                                        ./images/t@2x-5-min.jpg 2x"
+                                        media="(min-width: 768px)"
+                                />
+                                <source srcset="./images/m-5-min.jpg 1x,
+                                        ./images/m@2x-5-min.jpg 2x"
+                                        media="(min-width: 320px)"
+                                />
+                                <img src="./images/comp.jpg" alt="монитор компьютера">
+                            </picture>
                             <p class="product__description product__description--overlay">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала
                                 и сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -176,7 +320,23 @@
                 <li class="product__list card-set-item">
                     <a class="product__link link" href="">
                         <div class="product__wrap">
-                            <img src="./images/magazine%20(1).jpg" alt="развернутый журнал">
+                            <picture>
+                                <source
+                                        srcset="./images/magazine.jpg 1x,
+                                        ./images/d-6-min.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                />
+                                <source
+                                        srcset="./images/t-6-min.jpg 1x,
+                                        ./images/t@2x-6-min.jpg 2x"
+                                        media="(min-width: 768px)"
+                                />
+                                <source srcset="./images/m-6-min.jpg 1x,
+                                        ./images/m@2x-6-min.jpg 2x"
+                                        media="(min-width: 320px)"
+                                />
+                                <img src="./images/magazine.jpg" alt="развернутый журнал">
+                            </picture>
                             <p class="product__description product__description--overlay">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала
                                 и сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -192,7 +352,23 @@
                 <li class="product__list card-set-item">
                     <a class="product__link link" href="">
                         <div class="product__wrap">
-                            <img src="./images/tag%20(1).jpg" alt="бирка">
+                            <picture>
+                                <source
+                                        srcset="./images/tag.jpg 1x,
+                                        ./images/d-7-min.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                />
+                                <source
+                                        srcset="./images/t-7-min.jpg 1x,
+                                        ./images/t@2x-7-min.jpg 2x"
+                                        media="(min-width: 768px)"
+                                />
+                                <source srcset="./images/m-7-min.jpg 1x,
+                                        ./images/m@2x-7-min.jpg 2x"
+                                        media="(min-width: 320px)"
+                                />
+                                <img src="./images/tag.jpg" alt="бирка">
+                            </picture>
                             <p class="product__description product__description--overlay">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала
                                 и сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -208,7 +384,23 @@
                 <li class="product__list card-set-item">
                     <a class="product__link link" href="">
                         <div class="product__wrap">
-                            <img src="./images/site%20(1).jpg" alt="ноутбук с открытой страницей веб-сайта">
+                            <picture>
+                                <source
+                                        srcset="./images/site.jpg 1x,
+                                        ./images/d-8-min.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                />
+                                <source
+                                        srcset="./images/t-8-min.jpg 1x,
+                                        ./images/t@2x-8-min.jpg 2x"
+                                        media="(min-width: 768px)"
+                                />
+                                <source srcset="./images/m-8-min.jpg 1x,
+                                        ./images/m@2x-8-min.jpg 2x"
+                                        media="(min-width: 320px)"
+                                />
+                                <img src="./images/site.jpg" alt="ноутбук с открытой страницей веб-сайта">
+                            </picture>
                             <p class="product__description product__description--overlay">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала
                                 и сервисов. Все это позволит посетителю получить исчерпывающие сведения компании
@@ -239,7 +431,8 @@
                                                      rel="noopener noreferrer">г.Киев, пр-т Леси Украинки, 26</a></li>
                         <li class="address__item"><a class="address__link--mail link"
                                                      href="mailto:info@devstudio.com">info@example.com</a></li>
-                        <li class="address__item"><a class="address__link--tel link" href="tel:+380961111111">+38 099 111 11 11</a></li>
+                        <li class="address__item"><a class="address__link--tel link" href="tel:+380961111111">+38 099
+                            111 11 11</a></li>
                     </ul>
                 </address>
             </div>
@@ -292,4 +485,5 @@
         </div>
     </div>
 </footer>
+<script src="./js/mobile-menu.js"></script>
 </body>

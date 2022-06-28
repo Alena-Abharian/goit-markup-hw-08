@@ -5,8 +5,8 @@
     --card-item: 3;
   }
 
-  @include mq(desk){
-   --card-item: 6;
+  @include mq(desk) {
+    --card-item: 6;
   }
 
   &__btn {

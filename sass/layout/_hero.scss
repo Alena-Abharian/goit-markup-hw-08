@@ -1,7 +1,7 @@
 .hero {
   padding-bottom: 118px;
   padding-top: 118px;
-  @include mq(desk){
+  @include mq(desk) {
     padding-bottom: 200px;
     padding-top: 200px;
   }
@@ -16,22 +16,22 @@
   background-position: center;
   background-size: cover;
   text-align: center;
-  @include mq(retina){
+  @include mq(retina) {
     background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
     url("../../images/hero-m2x-min.jpg");
   }
-  @include mq(tab){
+  @include mq(tab) {
     background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
     url("../../images/hero-t-min.jpg");
-    @include mq(retina){
+    @include mq(retina) {
       background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
       url("../../images/hero-t2x-min.jpg");
     }
   }
-  @include mq(desk){
+  @include mq(desk) {
     background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
     url("../../images/hero-d-min.jpg");
-    @include mq(retina){
+    @include mq(retina) {
       background-image: linear-gradient(to right, var(--bg-gradient), var(--bg-gradient)),
       url("../../images/hero-d2x-min.jpg");
     }
@@ -48,11 +48,11 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
-    @include mq(tab){
+    @include mq(tab) {
       max-width: 360px;
     }
 
-    @include mq(desk){
+    @include mq(desk) {
       font-size: 44px;
       line-height: 1.4;
       max-width: 696px;
